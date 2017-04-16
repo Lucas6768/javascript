@@ -1,0 +1,63 @@
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+.transition-img{
+width:900px;
+height:250px;
+}
+
+</style>
+<script>
+
+function mouseDentro(id){
+window.document.getElementById(id).src = "13.jpg"
+}     
+
+function mouseFora(id){
+window.document.getElementById(id).src = "12.jpg" 
+}
+
+function numprimo(prm){
+   var n=window.document.getElementById("prm").value;
+   var contador=0;
+   var x;
+if (isNaN(n) || n==''){
+       alert("Digite um número válido");
+      return false;
+    }
+ for (x=1;x<=n;x++) {   
+  if (n%x==0) {
+       contador++;
+  }
+ }
+ if (contador==2)
+  window.document.getElementById("msg").innerHTML='O Número '.fontcolor('blue') +  n.fontcolor('blue')+' é Primo'.fontcolor('blue');
+ else 
+ window.document.getElementById("msg").innerHTML='O Número '.fontcolor('red') +  n.fontcolor('red')+' Não é Primo'.fontcolor('red');
+}
+
+function evento(){
+	var t=window.document.getElementById("prm").value;
+	if(t==""){
+		alert("Você Não Digitou Um Número");
+ }
+}
+
+
+</script>
+</head>
+<body>
+<center>
+Passe o Mouse sobre a imagem:<br>
+<img src="12.jpg" id="img" class="transition-img" onmouseover="mouseDentro('img')" onmouseout="mouseFora('img')" ></img><br>
+<table>
+<tr>
+<td>Digite um Número e Aperte TAB ou Clique Fora da Caixa para Ver se Ele é Primo:</td>
+<td><input type="text"  id="prm" onchange="numprimo(prm)" onfocus="this.value='';"" onblur="evento()" /></td>
+</tr>
+</table>
+<p id="msg"></p>
+</center>
+</body>
+</html>
