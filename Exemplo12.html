@@ -1,39 +1,40 @@
 <html>
-<head>
+<head><title>exemplo12</title>
 <meta charset="utf-8">
 <style>
-body{
-background-color:black;
-color:white;
+  body{
+ background-color:black;
+ color:white;
 }
 </style>
 <script>
-function CuboDoNúmero(Número)
+ function CuboDoNumero(numero)
 {
-var cubo=Número*Número*Número;
-return cubo;
-}function evento()
+      var cubo=numero*numero*numero;
+      return cubo;
+      }
+       function evento()
 {
-var num_valor=window.document.getElementById("num").value;
-var resl="O Cubo Do Número é igual a "+CuboDoNúmero(num_valor);
-window.document.getElementById("Mensagem").innerHTML=resl;
+       var num_valor=window.document.getElementById("num").value;
+       var resl="o cubo do número é igual a: "+CuboDoNumero(num_valor);
+window.document.getElementById("mensagem").innerHTML=resl;
 }
+  
 </script>
 </head>
-<body>
-<center>
-<h1>Retornando Valor de Uma Função</h1>
-<table>
-<tr>
-<td width="150">Digite um Número</td>
-<td width="30"><input type="text" id="num"value="" size="3"placeholder="Xanaina"></td>
-</tr>
-<tr>
-<td width="30" colspan="2" align="center"><input type="button" value="Calcular" onclick="evento()"></td>
-</tr>
-</table>
-<br>
-<p id="Mensagem"></p>
-</center>
-</body>
+
+   <body> 
+   <h1 >RETORNANDO VALOR DE UMA FUNÇÃO</h1>
+    <table >
+      <tr>
+      <td width="150">Digite um número:</td>
+      <td width="30"><input type="text" id="num" value="" size="3" /></td>
+       </tr>
+       <tr>
+        <td width="30" colspan="2" align="center"><input type="button" value="calcula" onclick="evento()"/></td>
+        </tr>
+       </table>
+       <br>
+       <p id="mensagem"></p>    
+   </body>
 </html>
